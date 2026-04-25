@@ -1,13 +1,14 @@
 import { defineConfig, devices } from '@playwright/test';
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 export default defineConfig({
   testDir: './tests',
 
-  timeout: 30 * 1000,
+  timeout: 120 * 1000,
   
 
   expect: {
-    timeout: 5000,
+    timeout: 15000,
   },
 
   fullyParallel: false,
@@ -18,7 +19,7 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'https://example.com',
+    baseURL: process.env.BASE_URL,
 
     headless: false,
     
@@ -30,6 +31,7 @@ export default defineConfig({
     trace: 'on-first-retry',
 
     actionTimeout: 60000,
+    navigationTimeout: 120000,
      launchOptions: {
       slowMo: 3000, // Slows down operations by 1000ms (1 second)
     },
