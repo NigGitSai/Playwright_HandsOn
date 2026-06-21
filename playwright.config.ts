@@ -29,7 +29,7 @@ export default defineConfig({
     video: 'retain-on-failure',
 
     trace: 'on-first-retry',
-
+    testIdAttribute: 'data-test',
     actionTimeout: 60000,
     navigationTimeout: 120000,
      launchOptions: {
