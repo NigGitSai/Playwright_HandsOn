@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv';
 import path from 'path';
 dotenv.config();
 export default defineConfig({
-  testDir: './tests/Advanced/Parallel',
+  testDir: './tests',
 
   timeout: 120 * 1000,
 
