@@ -1,5 +1,4 @@
 import {Locator, Page} from '@playwright/test';
-import { LoadFnOutput } from 'module';
 
 export class LoginPage {
 
@@ -59,6 +58,7 @@ export class LoginPage {
         await this.enterPassword(password);
         await this.clickLoginButton();
     }
+
 
     
 }

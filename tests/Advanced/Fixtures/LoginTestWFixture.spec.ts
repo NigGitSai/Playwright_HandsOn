@@ -1,5 +1,5 @@
 import {expect} from '@playwright/test'
-import {test} from '../../../fixtures/PageFixtures';
+import {test} from '../../../fixtures/LoginFixture';
 import sauceDemoLoginData from '../../../testdata/sauceDemo_LoginData.json';
 
 test('Login with valid credentials',async({page,loginPage})=>{

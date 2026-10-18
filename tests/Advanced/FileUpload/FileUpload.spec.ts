@@ -18,9 +18,9 @@ test('Test single file upload', async ({ page }) => {
     );
 
     await page.locator('#file-upload').setInputFiles(filePath);
-
-    // await expect(page.locator('#uploaded-files'))
-    //     .toHaveText('sample.txt');
+   const fileNameUploaded = await page.locator("#file-upload").inputValue();
+     console.log(fileNameUploaded);
+   //await expect(page.locator('#uploaded-files')).toHaveText('sample.txt');
 });
 
 
